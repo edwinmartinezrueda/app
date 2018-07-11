@@ -24,7 +24,7 @@ class ImagesController < ApplicationController
         @image = Image.new images_params
         @image.save
         
-        redirect_to @image
+        redirect_to images_path
     end
     
     def destroy 

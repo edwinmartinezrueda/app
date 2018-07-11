@@ -1,1 +1,10 @@
-<%= image.description %> <%= link_to  'Editar', edit_image_path(image) %> <%= link_to  'Borrar', image, method: :delete, data: {confirm: 'Está seguro que desea eliminar esta imagen?' } %> <br/>
+<div class="col-sm-4">
+   <figure>
+       <%= image_tag image.picture.thumb.url, class: 'figure-img img-fluid rounded' %>
+       <figcaption class="figure-caption">
+           <%= image.description %>
+           <%= link_to  'Editar', edit_image_path(image) %>
+           <%= link_to  'Borrar', image, method: :delete, data: {confirm: 'Está seguro que desea eliminar esta imagen?' } %>
+       </figcaption>
+   </figure>
+</div>
