@@ -3,7 +3,7 @@ class ImagesController < ApplicationController
     before_action :set_image, only: [:show, :edit, :update, :destroy]
     
     def index
-        @image = Image.all
+        @images = Image.where user_id: current_user.id
     end
     
     def new 
