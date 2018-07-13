@@ -1,7 +1,12 @@
 <%= form_for @image do |f| %>
    <span class="label"><%= f.label :description %></span>
    <%= f.text_field :description %> <br> 
-   
+   <br/>
+       <%= f.label 'Cargar Imagen ' %> <br>
+
+        <%= f.file_field :picture, class: 'form-control-file' %>
+
+    <br>
    <div class="row">
        <%= f.submit %>
    </div>
